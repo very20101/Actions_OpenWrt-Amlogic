@@ -111,6 +111,14 @@ sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-moun
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
+##luci-app-passwall
+rm -rf feeds/smpackage/luci-app-passwall
+
+git clone -b main https://github.com/very20101/Openwrt_N1_try package/op-N1_try
+mv package/op-N1_try/package_extra/luci-app-passwall feeds/smpackage/luci-app-passwall
+rm -rf package/op-N1_try
+
+
 # mosdns
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
