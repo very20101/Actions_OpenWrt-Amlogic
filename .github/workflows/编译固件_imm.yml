@@ -17,15 +17,15 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: 0 16 * * 4
+    - cron: 0 20 */6 * *
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: master
   FEEDS_CONF: imm.feeds.conf.default
   CONFIG_FILE: .config-full-new
-  DIY_P1_SH: Armv8/diy-part1.sh
-  DIY_P2_SH: Armv8/diy-part2.sh
+  DIY_P1_SH: diy-part1.sh
+  DIY_P2_SH: diy-immwrtpart2.sh
   TZ: Asia/Shanghai
 
 jobs:
