@@ -89,6 +89,7 @@ rm -rf feeds/packages/multimedia/aliyundrive-webdav
 rm -rf package/feeds/packages/perl-xml-parser
 rm -rf package/feeds/packages/lrzsz
 rm -rf package/feeds/packages/xfsprogs
+
 # 其他调整
 NAME=$"package/luci-app-unblockneteasemusic/root/usr/share/unblockneteasemusic" && mkdir -p $NAME/core
 curl 'https://api.github.com/repos/UnblockNeteaseMusic/server/commits?sha=enhanced&path=precompiled' -o commits.json
@@ -112,13 +113,13 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
 ##luci-app-passwall
-rm -rf feeds/smpackage/luci-app-passwall
+#rm -rf feeds/smpackage/luci-app-passwall
 
-git clone -b main https://github.com/very20101/Openwrt_N1_try package/op-N1_try
-mv package/op-N1_try/package_extra/luci-app-passwall feeds/smpackage/luci-app-passwall
+#git clone -b main https://github.com/very20101/Openwrt_N1_try package/op-N1_try
+#mv package/op-N1_try/package_extra/luci-app-passwall feeds/smpackage/luci-app-passwall
 
 
-rm -rf package/op-N1_try
+#rm -rf package/op-N1_try
 
 
 # mosdns
@@ -126,3 +127,6 @@ find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/geodata
+
+./scripts/feeds update -a
+./scripts/feeds install -f
