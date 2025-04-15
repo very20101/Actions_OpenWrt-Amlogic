@@ -118,6 +118,10 @@ git clone -b main https://github.com/very20101/Openwrt_N1_try package/op-N1_try
 mv package/op-N1_try/package_extra/luci-app-passwall feeds/smpackage/luci-app-passwall
 rm -rf package/op-N1_try
 
+## dns2socks-rust
+git clone https://github.com/very20101/Actions_OpenWrt-Amlogic package/Actions_OpWrt
+mv package/Actions_OpWrt/dns2socks-rust feeds/smpackage/dns2socks-rust
+
 
 # mosdns
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
