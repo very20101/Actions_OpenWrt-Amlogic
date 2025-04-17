@@ -109,8 +109,8 @@ sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-moun
 #sed -i 's#<%+cbi/tabmenu%>##g' package/small-packages/luci-app-nginx-manager/luasrc/view/nginx-manager/index.htm
 
 # golang版本修复
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+#rm -rf feeds/packages/lang/golang
+#git clone https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
 ##luci-app-passwall
 #rm -rf feeds/smpackage/luci-app-passwall
