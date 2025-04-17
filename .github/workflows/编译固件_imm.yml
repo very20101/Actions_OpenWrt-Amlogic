@@ -136,6 +136,7 @@ jobs:
       run: |
         cd openwrt
         rm -rf package/feeds/packages/owntone package/small-package/ddnsto
+        rm -rf package/small-package/trojan-plus package/feeds/packages/coremark
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
         echo "status=success" >> $GITHUB_OUTPUT
