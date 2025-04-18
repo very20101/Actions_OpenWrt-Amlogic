@@ -134,6 +134,7 @@ jobs:
     - name: 编译固件
       id: compile
       run: |
+        rm -rf /workdir/openwrt/build_dir/target-aarch64_cortex-a53_musl/pypi/PyMySQL-*
         cd openwrt
         rm -rf package/feeds/packages/owntone package/small-package/ddnsto
         rm -rf package/small-package/trojan-plus package/feeds/packages/coremark
