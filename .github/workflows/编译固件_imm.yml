@@ -95,7 +95,7 @@ jobs:
     - name: 克隆源码
       working-directory: /workdir
       run: |
-        sudo chmod -R 777 /workdir
+        chmod -R 775 /workdir
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
