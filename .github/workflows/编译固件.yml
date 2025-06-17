@@ -86,6 +86,7 @@ jobs:
         mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pyelftools \
         libpython3-dev qemu-utils rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip \
         vim wget xmlto xxd zlib1g-dev
+        sudo apt-get install -y build-essential gcc g++ make libgmp-dev libmpfr-dev libmpc-dev flex bison gawk gettext texinfo python3
         sudo -E apt-get install build-essential libgmp-dev libmpfr-dev libmpc-dev
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
