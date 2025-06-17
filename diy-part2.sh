@@ -117,6 +117,10 @@ rm -rf feeds/smpackage/luci-app-passwall
 
 git clone -b main https://github.com/very20101/Openwrt_N1_try package/op-N1_try
 mv package/op-N1_try/package_extra/luci-app-passwall feeds/smpackage/luci-app-passwall
+
+rm -rf toolchain/gcc/initial/Makefile
+cp -rf package/op-N1_try/patch/Makefile-gcc-initial toolchain/gcc/initial/Makefile
+
 rm -rf package/op-N1_try
 
 ## dns2socks-rust
