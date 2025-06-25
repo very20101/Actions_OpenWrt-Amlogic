@@ -121,6 +121,8 @@ sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-moun
 rm -rf feeds/packages/utils/kmod/Makefile
 git clone https://raw.githubusercontent.com/very20101/Actions_OpenWrt-Amlogic/refs/heads/main/patch/Makefile feeds/packages/utils/kmod/Makefile
 
+rm -rf feeds/packages/lang/python/python-ply/Makefile 
+git clone https://raw.githubusercontent.com/very20101/Actions_OpenWrt-Amlogic/refs/heads/main/patch/Makefile-python-ply feeds/packages/utils/kmod/Makefile
 
 #rm -rf package/op-N1_try
 
