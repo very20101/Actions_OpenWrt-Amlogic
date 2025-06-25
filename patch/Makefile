@@ -39,12 +39,6 @@ endef
 
 define Package/kmod
 $(call Package/kmod/Default)
-
-for tool in insmod lsmod rmmod depmod modprobe modinfo; do
-    rm -f /workdir/openwrt/build_dir/target-aarch64_cortex-a53_musl/kmod-32/ipkg-install/usr/bin/$tool
-    ln -s kmod /workdir/openwrt/build_dir/target-aarch64_cortex-a53_musl/kmod-32/ipkg-install/usr/bin/$tool
-done
-
   TITLE+= (tools)
   ALTERNATIVES:=\
     200:/sbin/depmod:/sbin/kmod \
@@ -62,7 +56,12 @@ Linux kernel module handling
 endef
 
 define Package/kmod/install
-	$(INSTALL_DIR) $(1)/sbin
+
+        for tool in insmod lsmod rmmod depmod modprobe modinfo; do
+           rm -f /workdir/openwrt/build_dir/target-aarch64_cortex-a53_musl/kmod-32/ipkg-install/usr/bin/$tool
+           ln -s kmod /workdir/openwrt/build_dir/target-aarch64_cortex-a53_musl/kmod-32/ipkg-install/usr/bin/$tool
+       done
+        $(INSTALL_DIR) $(1)/sbin
 	$(CP) $(PKG_INSTALL_DIR)/usr/bin/kmod $(1)/sbin
 endef
 
