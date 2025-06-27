@@ -135,6 +135,7 @@ jobs:
       id: compile
       run: |
         rm -rf /workdir/openwrt/build_dir/target-aarch64_cortex-a53_musl/pypi/PyMySQL-*
+        rm -rf openwrt/build_dir/target-aarch64_cortex-a53_musl/pypi/cached-property-1.5.2/ipkg-install/usr/lib/python3.11/site-packages/cached_property.py
         cd openwrt
         rm -rf package/feeds/packages/owntone package/small-package/ddnsto
         rm -rf package/small-package/trojan-plus package/feeds/packages/coremark
