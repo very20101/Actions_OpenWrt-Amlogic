@@ -44,7 +44,7 @@ sed -i '/exit 0/i\chmod +x /etc/init.d/*' package/lean/default-settings/files/zz
 # 拉取软件包
 
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
-git clone https://github.com/very20101/small-package package/small-package
+git clone https://github.com/very20101/small-package smpackage
 # git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-app-chinadns-ng
 # svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/luci-app-gowebdav package/luci-app-gowebdav
 # svn co https://github.com/immortalwrt-collections/openwrt-gowebdav/trunk/gowebdav package/gowebdav
