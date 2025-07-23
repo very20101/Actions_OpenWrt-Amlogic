@@ -28,6 +28,7 @@ define Package/pv
   CATEGORY:=Utilities
   TITLE:=Shell pipeline element to meter data passing through
   URL:=https://www.ivarch.com/programs/pv.shtml
+  DEPENDS:=+libncursesw
 endef
 
 define Package/pv/description
