@@ -108,7 +108,7 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
         
     - name: Clean toolchain
-      run: make toolchain/install
+      run: make toolchain/install clean
            
     - name: 更新feeds
       run: cd openwrt && make dirclean
