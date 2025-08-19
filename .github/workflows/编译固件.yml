@@ -108,7 +108,9 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
            
     - name: 更新feeds
-      run: cd openwrt && make dirclean
+      run: |
+           cd openwrt
+           make dirclean
            ./scripts/feeds update -a
 
     - name: 安装feeds
