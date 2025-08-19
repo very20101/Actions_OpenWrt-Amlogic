@@ -108,10 +108,7 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
            
     - name: 更新feeds
-      run: |
-           cd openwrt
-           make dirclean
-           ./scripts/feeds update -a
+      run: cd openwrt && ./scripts/feeds update -a
 
     - name: 安装feeds
       run: cd openwrt && ./scripts/feeds install -a
@@ -139,6 +136,7 @@ jobs:
       id: compile
       run: |
         cd openwrt
+        make dirclean
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
         echo "status=success" >> $GITHUB_OUTPUT
