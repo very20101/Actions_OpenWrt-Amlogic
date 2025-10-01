@@ -136,6 +136,13 @@ find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/geodata
 
+# add pv v2ray-geoip v2ray-geosite
+git clone https://github.com/very20101/Actions_OpenWrt-Amlogic OpenWrt-Amlogic
+cp -rf OpenWrt-Amlogic/patch/utils-pv package/utils/pv
+
+
+rm -rf OpenWrt-Amlogic
+
 rm -rf package/small-package/{base-files,dnsmasq,firewall*,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
 
 ./scripts/feeds update -a
