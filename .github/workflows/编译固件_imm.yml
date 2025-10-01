@@ -26,6 +26,8 @@ env:
   CONFIG_FILE: .config-full-new
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2-immwrt.sh
+  FILE_NAME: openwrt_armvirt
+  PRODUCT_NAME: openwrt_armvirt
   TZ: Asia/Shanghai
 
 jobs:
