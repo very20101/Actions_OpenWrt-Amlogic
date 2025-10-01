@@ -136,5 +136,7 @@ find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/geodata
 
+rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
+
 ./scripts/feeds update -a
 ./scripts/feeds install -f
