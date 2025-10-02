@@ -77,7 +77,7 @@ jobs:
         name: R${{ env.DATE }} for ARMv8_Nova${{ env.VERSION }}
         allowUpdates: true
         removeArtifacts: true
-        tag: ARMv8_Nova${{ env.VERSION }}
+        tag: ARMv8_ImmL${{ env.VERSION }}
         token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
         body: |
