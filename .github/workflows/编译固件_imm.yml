@@ -171,22 +171,6 @@ jobs:
       with:
         name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
-
-    - name: Create release
-      id: release
-      uses: ncipollo/release-action@main
-      with:
-        name: R${{ env.DATE }} for ${{ env.PRODUCT_NAME }}
-        allowUpdates: true
-        tag: ${{ env.FILE_NAME }}
-        commit: main
-        token: ${{ secrets.RELEASES_TOKEN }}
-        body: |
-          - 此为底包，非完整固件
-          - 默认IP：192.168.1.200 默认密码：password
-          - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/immortalwrt/immortalwrt)更新记录】
-          ${{ env.useVersionInfo }}
-        artifacts: ${{ env.FIRMWARE }}/*
         
     - name: 打包内核
       uses: unifreq/openwrt_packit@master
