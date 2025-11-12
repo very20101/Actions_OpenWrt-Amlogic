@@ -3,7 +3,7 @@
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 #
 # This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
+# See /LICENSE for more information. 
 #
 # https://github.com/P3TERX/Actions-OpenWrt
 # File name: diy-part2.sh
@@ -137,14 +137,14 @@ git clone https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/geodata
 
 # add pv v2ray-geoip v2ray-geosite
-git clone https://github.com/very20101/Actions_OpenWrt-Amlogic OpenWrt-Amlogic
-cp -rf OpenWrt-Amlogic/patch/utils-pv package/utils/pv
+git clone https://github.com/very20101/Actions_OpenWrt-Amlogic package/OpenWrt-Amlogic
+cp -rf package/OpenWrt-Amlogic/patch/utils-pv package/utils/pv
 
 ## nmap
 rm -rf feeds/packages/net/nmap/Makefile
-git clone https://raw.githubusercontent.com/very20101/Actions_OpenWrt-Amlogic/refs/heads/main/patch/Makefile-nmap feeds/packages/net/nmap/Makefile
+cp -rf package/OpenWrt-Amlogic/patch/Makefile-nmap feeds/packages/net/nmap/Makefile
 
-rm -rf OpenWrt-Amlogic
+#rm -rf OpenWrt-Amlogic
 
 rm -rf package/small-package/{base-files,dnsmasq,firewall*,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
 
