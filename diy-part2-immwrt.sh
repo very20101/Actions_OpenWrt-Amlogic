@@ -140,6 +140,9 @@ git clone https://github.com/sbwml/v2ray-geodata package/geodata
 git clone https://github.com/very20101/Actions_OpenWrt-Amlogic OpenWrt-Amlogic
 cp -rf OpenWrt-Amlogic/patch/utils-pv package/utils/pv
 
+## nmap
+rm -rf feeds/packages/net/nmap/Makefile
+cp -rf OpenWrt-Amlogic/patch/Makefile-namp feeds/packages/net/nmap/Makefile
 
 rm -rf OpenWrt-Amlogic
 
