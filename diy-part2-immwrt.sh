@@ -138,7 +138,7 @@ git clone https://github.com/sbwml/v2ray-geodata package/geodata
 
 # add pv v2ray-geoip v2ray-geosite
 git clone https://github.com/very20101/Actions_OpenWrt-Amlogic package/OpenWrt-Amlogic
-cp -rf package/OpenWrt-Amlogic/patch/utils-pv package/utils/pv
+#cp -rf package/OpenWrt-Amlogic/patch/utils-pv package/utils/pv
 
 ## nmap
 rm -rf feeds/packages/net/nmap/Makefile
