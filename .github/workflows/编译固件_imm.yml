@@ -153,7 +153,7 @@ jobs:
         
     - name: Upload OpenWrt Firmware to Release
       uses: ncipollo/release-action@main
-      if: ${{ steps.compile.outputs.status }} == 'success' && !cancelled()
+      if: ${{ steps.compile.outputs.status == 'success' && !cancelled()}}
       with:
         name: OpenWrt_armsr
         tag: ${{ env.OPENWRT_TAG }}
@@ -174,7 +174,8 @@ jobs:
         KERNEL_VERSION_NAME: 6.1.y_6.6.y_6.12.y
         
     - name: 整理文件
-      run: mv /opt/openwrt_packit/output/* /workdir/upload/
+      run: mkdir /workdir/upload/
+           mv /opt/openwrt_packit/output/* /workdir/upload/
       
     - name: 发布固件
       uses: ncipollo/release-action@v1
